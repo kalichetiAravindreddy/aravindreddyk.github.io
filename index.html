@@ -43,27 +43,25 @@
 
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
-      <!--close button at top-->
-        <div class="mobile-menu-header">
+      <div class="mobile-menu-header">
         <div class="mobile-menu-title">Menu</div>
-        <button class="mobile-close-button" onclick="closeMobileMenu">✕</button>
+        <button class="mobile-close-button" id="mobileCloseBtn">✕</button>
       </div>
-      <a class="btn" href="#about" onclick="closeMobileMenu()">About</a>
-      <a class="btn" href="#education" onclick="closeMobileMenu()">Education</a>
-      <a class="btn" href="#certifications" onclick="closeMobileMenu()">Certifications</a>
-      <a class="btn" href="#skills" onclick="closeMobileMenu()">Skills</a>
-      <a class="btn" href="#projects" onclick="closeMobileMenu()">Projects</a>
-      <a class="btn" href="#resources" onclick="closeMobileMenu()">Resources</a>
-      <a class="btn" href="#contact" onclick="closeMobileMenu()">Contact</a>
-      <a class="btn" href="./resume.pdf" download onclick="closeMobileMenu()">Download Resume</a>
-      <a class="btn" href="https://github.com/yourusername" target="_blank" onclick="closeMobileMenu()">GitHub</a>
+      <a class="btn" href="#about">About</a>
+      <a class="btn" href="#education">Education</a>
+      <a class="btn" href="#certifications">Certifications</a>
+      <a class="btn" href="#skills">Skills</a>
+      <a class="btn" href="#projects">Projects</a>
+      <a class="btn" href="#resources">Resources</a>
+      <a class="btn" href="#contact">Contact</a>
+      <a class="btn" href="./resume.pdf" download>Download Resume</a>
+      <a class="btn" href="https://github.com/yourusername" target="_blank">GitHub</a>
 
       <div class="mobile-theme-section">
-      <button class="btn mobile-theme-btn" id="mobileThemeToggle" onclick="toggletheme()">
-        <span class="theme-icon">🌙</span>
-        Toggle Theme
-      </button>
-      </div>
+        <button class="btn mobile-theme-btn" id="mobileThemeToggle">
+          <span class="theme-icon">🌙</span>
+          Toggle Theme
+        </button>
       </div>
     </div>
 
@@ -102,31 +100,6 @@
             <div class="muted" style="font-size:13px">Replace with a neat headshot</div>
           </div>
         </div>
-        <!-- upload photo profile -->
-         <!--
-        <div class="profile-photo">
-            <img src="image_src.jpeg" alt="Aravind reddy profir photo"
-
-        <div class="hero-right fade-up" style="animation-delay:.12s">
-            <div class="profile-photo">
-                <img src="./assets/your-photo.jpg" alt="Aravind V - Profile Photo">
-       </div>
-
-        css for profile
-
-        .profile-photo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 12px;
-            transition: all 0.3s ease;
-            }
-
-            .profile-photo:hover img {
-            transform: scale(1.05);
-            box-shadow: 0 10px 30px rgba(255,255,255,0.1);
-                        }
-         -->
 
         <div style="display:flex;gap:8px;margin-top:14px;justify-content:space-between;align-items:center">
           <div>
@@ -148,70 +121,69 @@
       </section>
 
       <section id="education" class="fade-up">
-  <h3 class="section-title">Education</h3>
-  <div class="education-horizontal">
-    
-    <!-- College -->
-    <div class="education-card">
-      <div class="edu-logo" onclick="openLogoModal('college')">
-        <div class="logo-shine"></div>
-        <img src="portfolio-images/skacas.logo.png" alt="College Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-        <div class="edu-fallback" style="display: none;">SKAC</div>
-        <div class="logo-hover-effect"></div>
-      </div>
-      <div class="education-content">
-        <div class="education-title">Bachelor of Science</div>
-        <div class="education-subtitle">Sri Krishna Adithya College of Arts and Science</div>
-        <div class="education-details">Stream: Computer Technology</div>
-        <div class="education-year">2021-2024</div>
-        <div class="education-marks">CGPA : 7.5 / 10</div>
-      </div>
-    </div>
-    
-    <!-- 12th Class -->
-    <div class="education-card">
-      <div class="edu-logo" onclick="openLogoModal('school')">
-        <div class="logo-shine"></div>
-        <img src="portfolio-images/avb.logo.jpg" alt="School Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-        <div class="edu-fallback" style="display: none;">AVB</div>
-        <div class="logo-hover-effect"></div>
+        <h3 class="section-title">Education</h3>
+        <div class="education-horizontal">
+          
+          <!-- College -->
+          <div class="education-card">
+            <div class="edu-logo" onclick="openLogoModal('college')">
+              <div class="logo-shine"></div>
+              <img src="portfolio-images/skacas.logo.png" alt="College Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+              <div class="edu-fallback" style="display: none;">SKAC</div>
+              <div class="logo-hover-effect"></div>
+            </div>
+            <div class="education-content">
+              <div class="education-title">Bachelor of Science</div>
+              <div class="education-subtitle">Sri Krishna Adithya College of Arts and Science</div>
+              <div class="education-details">Stream: Computer Technology</div>
+              <div class="education-year">2021-2024</div>
+              <div class="education-marks">CGPA : 7.5 / 10</div>
+            </div>
+          </div>
+          
+          <!-- 12th Class -->
+          <div class="education-card">
+            <div class="edu-logo" onclick="openLogoModal('school')">
+              <div class="logo-shine"></div>
+              <img src="portfolio-images/avb.logo.jpg" alt="School Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+              <div class="edu-fallback" style="display: none;">AVB</div>
+              <div class="logo-hover-effect"></div>
+            </div>
+            <div class="education-content">
+              <div class="education-title">12th Grade / HSC</div>
+              <div class="education-subtitle">Avb matriculation Higher Secondary school</div>
+              <div class="education-details">Stream: General Machinist</div>
+              <div class="education-year">2019-2021</div>
+              <div class="education-marks">percentage : 79% / 100%</div>
+            </div>
+          </div>
+          
+          <!-- 10th Class -->
+          <div class="education-card">
+            <div class="edu-number">3</div>
+            <div class="education-content">
+              <div class="education-title">10th Grade / SSLC</div>
+              <div class="education-subtitle">Your School Name</div>
+              <div class="education-details">Board: State Board</div>
+              <div class="education-year">2018-2019</div>
+              <div class="education-marks">Marks: Loading...</div>
+            </div>
+          </div>
         </div>
-      <div class="education-content">
-        <div class="education-title">12th Grade / HSC</div>
-        <div class="education-subtitle">Avb matriculation Higher Secondary school</div>
-        <div class="education-details">Stream: General Machinist</div>
-        <div class="education-year">2019-2021</div>
-        <div class="education-marks">percentage : 79% / 100%</div>
+      </section>
 
+      <!-- Logo Modal -->
+      <div id="logoModal" class="modal" onclick="closeLogoModal(event)">
+        <div class="modal-card logo-modal">
+          <div class="modal-close" onclick="closeLogoModal()">✕</div>
+          <div id="logoModalContent">
+            <div class="full-logo-container">
+              <img id="fullLogo" src="" alt="Full Logo">
+              <div id="logoTitle" class="logo-title"></div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-    
-    <!-- 10th Class (Optional) -->
-    <div class="education-card">
-      <div class="edu-number">3</div>
-      <div class="edu-content">
-        <div class="edu-title">10th Grade / SSLC</div>
-        <div class="edu-subtitle">Your School Name</div>
-        <div class="edu-details">Board: State Board</div>
-        <div class="edu-year">2018-2019</div>
-      </div>
-    </div>
-    
-  </div>
-</section>
-    <!-- Logo Modal -->
-<div id="logoModal" class="modal" onclick="closeLogoModal(event)">
-  <div class="modal-card logo-modal">
-    <div class="modal-close" onclick="closeLogoModal()">✕</div>
-    <div id="logoModalContent">
-      <div class="full-logo-container">
-        <img id="fullLogo" src="" alt="Full Logo">
-        <div id="logoTitle" class="logo-title"></div>
-      </div>
-    </div>
-  </div>
-</div>
-        
 
       <section id="certifications" class="fade-up">
         <h3 class="section-title">Certifications</h3>
