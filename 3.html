@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Aravind Reddy— Portfolio</title>
+  <meta name="description" content="Professional one-page black & white portfolio for freshers — projects, resume, skills, contact." />
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=" />  
+  <link rel="stylesheet" href="3.css">
+</head>
+<body>
+  <!-- Particle Background -->
+  <div class="particles" id="particles"></div>
+
+  <div class="container">
+    <nav>
+      <div class="brand">
+        <div class="logo">AR</div>
+        <div>
+          <h1>Aravind Reddy</h1>
+          <div class="muted" style="font-size:13px">Fresher · Python & Web</div>
+        </div>
+      </div>
+      
+      <div class="nav-links">
+        <a class="btn" href="#about">About</a>
+        <a class="btn" href="#education">Education</a>
+        <a class="btn" href="#certifications">Certifications</a>
+        <a class="btn" href="#skills">Skills</a>
+        <a class="btn" href="#projects">Projects</a>
+        <a class="btn" href="#resources">Resources</a>
+        <a class="btn" href="#contact">Contact</a>
+        <button class="theme-toggle" id="themeToggle">🌙</button>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a class="btn" href="#about" onclick="closeMobileMenu()">About</a>
+      <a class="btn" href="#education" onclick="closeMobileMenu()">Education</a>
+      <a class="btn" href="#certifications" onclick="closeMobileMenu()">Certifications</a>
+      <a class="btn" href="#skills" onclick="closeMobileMenu()">Skills</a>
+      <a class="btn" href="#projects" onclick="closeMobileMenu()">Projects</a>
+      <a class="btn" href="#resources" onclick="closeMobileMenu()">Resources</a>
+      <a class="btn" href="#contact" onclick="closeMobileMenu()">Contact</a>
+      <a class="btn" href="./resume.pdf" download onclick="closeMobileMenu()">Download Resume</a>
+      <a class="btn" href="https://github.com/yourusername" target="_blank" onclick="closeMobileMenu()">GitHub</a>
+      <button class="theme-toggle" id="mobileThemeToggle">🌙</button>
+    </div>
+
+    <header class="hero">
+      <div class="hero-left fade-up" style="animation-delay:.05s">
+        <h2 class="muted">Hi, I'm</h2>
+        <h1>Aravind Reddy</h1>
+        <div class="typewriter" id="typewriter">Fresher · Python & Web</div>
+        <p class="hero-copy muted">I build clean, maintainable web apps using Python, Flask, HTML, CSS and modern tooling. I focus on performance, readable code, and simple design — ready to learn and ship.</p>
+
+        <div style="margin-top:20px;display:flex;gap:12px;align-items:center">
+          <a class="btn" href="#projects">View Projects</a>
+          <a class="btn btn-ghost" href="#contact">Hire / Contact</a>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <b>3</b>
+            <div class="muted">Projects</div>
+          </div>
+          <div class="stat">
+            <b>Python</b>
+            <div class="muted">Primary</div>
+          </div>
+          <div class="stat">
+            <b>Flask</b>
+            <div class="muted">Web</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right fade-up" style="animation-delay:.12s">
+        <div class="profile-photo">
+          <div style="text-align:center">
+            <div style="font-size:22px;font-weight:700;opacity:.9">Your Photo</div>
+            <div class="muted" style="font-size:13px">Replace with a neat headshot</div>
+          </div>
+        </div>
+        <!-- upload photo profile -->
+         <!--
+        <div class="profile-photo">
+            <img src="image_src.jpeg" alt="Aravind reddy profir photo"
+
+        <div class="hero-right fade-up" style="animation-delay:.12s">
+            <div class="profile-photo">
+                <img src="./assets/your-photo.jpg" alt="Aravind V - Profile Photo">
+       </div>
+
+        css for profile
+
+        .profile-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            }
+
+            .profile-photo:hover img {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(255,255,255,0.1);
+                        }
+         -->
+
+        <div style="display:flex;gap:8px;margin-top:14px;justify-content:space-between;align-items:center">
+          <div>
+            <div class="muted" style="font-size:13px">Location</div>
+            <div style="font-weight:700">India</div>
+          </div>
+          <div>
+            <div class="muted" style="font-size:13px">Availability</div>
+            <div style="font-weight:700">Open to work</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="about" class="fade-up">
+        <h3 class="section-title">About Me</h3>
+        <p class="muted">I'm a fresher with a passion for building web apps. I like Python, Flask, and crafting clean UIs. I'm actively learning modern web tooling and eager to contribute to real projects.</p>
+      </section>
+
+      <section id="education" class="fade-up">
+  <h3 class="section-title">Education</h3>
+  <div class="education-horizontal">
+    
+    <!-- College -->
+    <div class="education-card">
+      <div class="edu-logo" onclick="openLogoModal('college')">
+        <div class="logo-shine"></div>
+        <img src="portfolio-images/skacas.logo.png" alt="College Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+        <div class="edu-fallback" style="display: none;">SKAC</div>
+        <div class="logo-hover-effect"></div>
+      </div>
+      <div class="education-content">
+        <div class="education-title">Bachelor of Science</div>
+        <div class="education-subtitle">Sri Krishna Adithya College of Arts and Science</div>
+        <div class="education-details">Stream: Computer Technology</div>
+        <div class="education-year">2021-2024</div>
+        <div class="education-marks">CGPA : 7.5 / 10</div>
+      </div>
+    </div>
+    
+    <!-- 12th Class -->
+    <div class="education-card">
+      <div class="edu-logo" onclick="openLogoModal('school')">
+        <div class="logo-shine"></div>
+        <img src="portfolio-images/avb.logo.jpg" alt="School Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+        <div class="edu-fallback" style="display: none;">AVB</div>
+        <div class="logo-hover-effect"></div>
+        </div>
+      <div class="education-content">
+        <div class="education-title">12th Grade / HSC</div>
+        <div class="education-subtitle">Avb matriculation Higher Secondary school</div>
+        <div class="education-details">Stream: General Machinist</div>
+        <div class="education-year">2019-2021</div>
+        <div class="education-marks">percentage : 79% / 100%</div>
+
+      </div>
+    </div>
+    
+    <!-- 10th Class (Optional) -->
+    <div class="education-card">
+      <div class="edu-number">3</div>
+      <div class="edu-content">
+        <div class="edu-title">10th Grade / SSLC</div>
+        <div class="edu-subtitle">Your School Name</div>
+        <div class="edu-details">Board: State Board</div>
+        <div class="edu-year">2018-2019</div>
+      </div>
+    </div>
+    
+  </div>
+</section>
+    <!-- Logo Modal -->
+<div id="logoModal" class="modal" onclick="closeLogoModal(event)">
+  <div class="modal-card logo-modal">
+    <div class="modal-close" onclick="closeLogoModal()">✕</div>
+    <div id="logoModalContent">
+      <div class="full-logo-container">
+        <img id="fullLogo" src="" alt="Full Logo">
+        <div id="logoTitle" class="logo-title"></div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+
+      <section id="certifications" class="fade-up">
+        <h3 class="section-title">Certifications</h3>
+        <div class="certs-grid">
+          <div class="cert-card">
+            <div class="cert-icon">💻</div>
+            <h4>Full Stack development</h4>
+            <p class="muted">Accent Techno Soft · Coimbatore · 2023</p>
+          </div>
+          <div class="cert-card">
+            <div class="cert-icon">🌐</div>
+            <h4>PHP</h4>
+            <p class="muted">Accent Techno Soft · 2023</p>
+          </div>
+          <div class="cert-card">
+            <div class="cert-icon">📊</div>
+            <h4>SQL Fundamentals</h4>
+            <p class="muted">Coursera · 2023</p>
+          </div>
+          <div class="cert-card">
+            <div class="cert-icon">⚡</div>
+            <h4>Flask Framework</h4>
+            <p class="muted">YouTube · FreeCodeCamp · 2023</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="resources" class="fade-up">
+        <h3 class="section-title">Download Resources</h3>
+        <div class="resources-grid">
+          <a href="assets/AC.pdf" download class="resource-card">
+            <div class="resource-icon">📄</div>
+            <div class="resource-info">
+              <h4>Resume PDF</h4>
+              <p>Updated: oct 2025</p>
+            </div>
+          </a>
+          <a href="./portfolio.pdf" download class="resource-card">
+            <div class="resource-icon">🎨</div>
+            <div class="resource-info">
+              <h4>Portfolio PDF</h4>
+              <p>Complete portfolio</p>
+            </div>
+          </a>
+          <a href="./projects.zip" download class="resource-card">
+            <div class="resource-icon">💻</div>
+            <div class="resource-info">
+              <h4>Project Codes</h4>
+              <p>Source code files</p>
+            </div>
+          </a>
+          <a href="./certificates.pdf" download class="resource-card">
+            <div class="resource-icon">🏆</div>
+            <div class="resource-info">
+              <h4>Certificates</h4>
+              <p>All certifications</p>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section id="skills" class="fade-up">
+        <h3 class="section-title">Skills</h3>
+        <div class="skills-grid">
+          <div class="skill">
+            <h4>Python</h4>
+            <div class="bar" aria-hidden><i style="width:85%"></i></div>
+            <div class="muted" style="margin-top:8px;font-size:13px">Flask, scripting, data handling</div>
+          </div>
+          <div class="skill">
+            <h4>Web</h4>
+            <div class="bar" aria-hidden><i style="width:78%"></i></div>
+            <div class="muted" style="margin-top:8px;font-size:13px">HTML, CSS, JS — responsive + accessible</div>
+          </div>
+          <div class="skill">
+            <h4>Databases</h4>
+            <div class="bar" aria-hidden><i style="width:60%"></i></div>
+            <div class="muted" style="margin-top:8px;font-size:13px">SQLite, basic SQL</div>
+          </div>
+          <div class="skill">
+            <h4>Tools</h4>
+            <div class="bar" aria-hidden><i style="width:72%"></i></div>
+            <div class="muted" style="margin-top:8px;font-size:13px">Git, VS Code, basic Linux</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="fade-up">
+        <h3 class="section-title">Selected Projects</h3>
+        <div class="projects-grid">
+
+          <article class="card">
+            <h4>Project One — TODO App</h4>
+            <p class="muted">A minimal TODO app built with Flask and SQLite. Authentication, create/read/update/delete tasks.</p>
+            <div class="tags" style="margin:10px 0">
+              <span class="tag">Flask</span>
+              <span class="tag">SQLite</span>
+              <span class="tag">HTML/CSS</span>
+            </div>
+            <div class="project-actions">
+              <button class="link-like" onclick="openProject('proj1')">Details</button>
+              <a class="link-like" href="https://github.com/yourusername/project-one" target="_blank">View on GitHub</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h4>Project Two — Portfolio Generator</h4>
+            <p class="muted">A small Python utility that generates a static HTML portfolio from a YAML config. Useful for quick prototypes.</p>
+            <div class="tags" style="margin:10px 0">
+              <span class="tag">Python</span>
+              <span class="tag">HTML</span>
+              <span class="tag">CLI</span>
+            </div>
+            <div class="project-actions">
+              <button class="link-like" onclick="openProject('proj2')">Details</button>
+              <a class="link-like" href="https://github.com/yourusername/project-two" target="_blank">View on GitHub</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h4>Project Three — Notes API</h4>
+            <p class="muted">A RESTful notes API made with Flask and Marshmallow for serialization. Includes token auth and tests.</p>
+            <div class="tags" style="margin:10px 0">
+              <span class="tag">Flask</span>
+              <span class="tag">API</span>
+              <span class="tag">Tests</span>
+            </div>
+            <div class="project-actions">
+              <button class="link-like" onclick="openProject('proj3')">Details</button>
+              <a class="link-like" href="https://github.com/yourusername/project-three" target="_blank">View on GitHub</a>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- Modal for project details -->
+      <div id="modal" class="modal" onclick="closeModal(event)">
+        <div class="modal-card" role="dialog" aria-modal="true">
+          <div class="modal-close" onclick="closeModal()">✕</div>
+          <div id="modalContent"></div>
+          <div style="text-align:right;margin-top:12px"><button class="btn" onclick="closeModal()">Close</button></div>
+        </div>
+      </div>
+
+      <section id="contact" class="fade-up">
+        <h3 class="section-title">Contact</h3>
+        <p class="muted">I'm open to internships and junior roles. Want to chat? Send an email or download my resume.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:12px">
+          <a class="btn" href="mailto:aravindsuma3579@gmail.com">Email Me</a>
+          <a class="btn" href="assets/AC.pdf" download>Download Resume</a>
+          <a class="btn" href="https://github.com/yourusername" target="_blank">GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div class="muted">Built with ❤️ · Fresh & Professional · Black & White Theme</div>
+    </footer>
+
+  </div>
+
+  <!-- Back to top button -->
+  <div class="back-to-top" id="backToTop" onclick="scrollToTop()">
+    ↑
+  </div>
+  <script src="3.js"></script>
+</body>
+</html>
