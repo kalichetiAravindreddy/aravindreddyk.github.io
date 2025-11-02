@@ -142,23 +142,23 @@ nav{display:flex; align-items:center; justify-content:space-between; padding:8px
 }
 
 /* Specifically target the theme button to override above styles */
-.mobile-theme-btn {
+/* Specifically target the theme button to override above styles */
+.mobile-theme-section .btn.mobile-theme-btn {
   width: 100%;
-  display: flex !important; /* Force display flex */
+  display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
   padding: 15px;
   background: var(--glass);
-  border: 1px solid rgba(255,255,255,0.1) !important;
-  border-radius: 10px !important;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 10px;
   color: var(--accent);
   cursor: pointer;
   transition: all 0.3s ease;
   font-size: 16px;
   margin-top: 10px;
-  /* Remove the bottom border from previous rule */
-  border-bottom: none !important;
+  border-bottom: none;
 }
 
 .mobile-theme-section {
