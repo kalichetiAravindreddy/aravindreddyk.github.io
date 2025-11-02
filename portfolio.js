@@ -38,44 +38,43 @@ themeToggle.addEventListener('click', toggleTheme);
 if(mobileThemeToggle) mobileThemeToggle.addEventListener('click', toggleTheme);
 
 // Mobile Menu
-const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-const mobileMenu = document.getElementById('mobileMenu');
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
 
-function toggleMobileMenu() {
-  mobileMenuBtn.classList.toggle('active');
-  mobileMenu.classList.toggle('active');
-  document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : 'auto';
-}
+      function toggleMobileMenu() {
+        mobileMenuBtn.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
+        document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : 'auto';
+      }
 
-function closeMobileMenu() {
-  mobileMenuBtn.classList.remove('active');
-  mobileMenu.classList.remove('active');
-  document.body.style.overflow = 'auto';
-}
+      function closeMobileMenu() {
+        mobileMenuBtn.classList.remove('active');
+        mobileMenu.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
 
-// Close menu when clicking outside
-document.addEventListener('click', function(event) {
-  if (mobileMenu.classList.contains('active') && 
-      !mobileMenu.contains(event.target) && 
-      !mobileMenuBtn.contains(event.target)) {
-    closeMobileMenu();
-  }
-});
+      // Close menu when clicking outside
+      document.addEventListener('click', function(event) {
+        if (mobileMenu.classList.contains('active') && 
+            !mobileMenu.contains(event.target) && 
+            !mobileMenuBtn.contains(event.target)) {
+          closeMobileMenu();
+        }
+      });
 
-// Close menu when pressing Escape key
-document.addEventListener('keydown', function(event) {
-  if (event.key === 'Escape' && mobileMenu.classList.contains('active')) {
-    closeMobileMenu();
-  }
-});
+      // Close menu when pressing Escape key
+      document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape' && mobileMenu.classList.contains('active')) {
+          closeMobileMenu();
+        }
+      });
 
-mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+      mobileMenuBtn.addEventListener('click', toggleMobileMenu);
 
-// Close menu when clicking on any mobile menu link
-document.querySelectorAll('.mobile-menu .btn').forEach(link => {
-  link.addEventListener('click', closeMobileMenu);
-});
-
+      // Close menu when clicking on any mobile menu link or button
+      document.querySelectorAll('.mobile-menu .btn, .mobile-back-btn, .mobile-close-btn').forEach(element => {
+        element.addEventListener('click', closeMobileMenu);
+      });
     // Particle Background
     function createParticles() {
       const particlesContainer = document.getElementById('particles');

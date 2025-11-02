@@ -41,30 +41,33 @@
       </button>
     </nav>
 
-    <!-- Mobile Menu -->
+        <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
-      <!--close button at top-->
-        <div class="mobile-menu-header">
-        <div class="mobile-menu-title">Menu</div>
-        <button class="mobile-close-button" onclick="closeMobileMenu">✕</button>
+      <div class="mobile-menu-header">
+        <!-- Back Arrow + Close Button -->
+        <button class="mobile-back-btn" onclick="closeMobileMenu()">
+          <span class="back-arrow">←</span>
+          Back
+        </button>
+        <button class="mobile-close-btn" onclick="closeMobileMenu()">✕</button>
       </div>
+      
       <div class="mobile-menu-content">
-      <a class="btn" href="#about" onclick="closeMobileMenu()">About</a>
-      <a class="btn" href="#education" onclick="closeMobileMenu()">Education</a>
-      <a class="btn" href="#certifications" onclick="closeMobileMenu()">Certifications</a>
-      <a class="btn" href="#skills" onclick="closeMobileMenu()">Skills</a>
-      <a class="btn" href="#projects" onclick="closeMobileMenu()">Projects</a>
-      <a class="btn" href="#resources" onclick="closeMobileMenu()">Resources</a>
-      <a class="btn" href="#contact" onclick="closeMobileMenu()">Contact</a>
-      <a class="btn" href="./resume.pdf" download onclick="closeMobileMenu()">Download Resume</a>
-      <a class="btn" href="https://github.com/yourusername" target="_blank" onclick="closeMobileMenu()">GitHub</a>
-
-      <div class="mobile-theme-section">
-      <button class="btn mobile-theme-btn" id="mobileThemeToggle" onclick="toggletheme()">
-        <span class="theme-icon">🌙</span>
-        Toggle Theme
-      </button>
-      </div>
+        <a class="btn mobile-btn" href="#about" onclick="closeMobileMenu()">About</a>
+        <a class="btn mobile-btn" href="#education" onclick="closeMobileMenu()">Education</a>
+        <a class="btn mobile-btn" href="#certifications" onclick="closeMobileMenu()">Certifications</a>
+        <a class="btn mobile-btn" href="#skills" onclick="closeMobileMenu()">Skills</a>
+        <a class="btn mobile-btn" href="#projects" onclick="closeMobileMenu()">Projects</a>
+        <a class="btn mobile-btn" href="#resources" onclick="closeMobileMenu()">Resources</a>
+        <a class="btn mobile-btn" href="#contact" onclick="closeMobileMenu()">Contact</a>
+        <a class="btn mobile-btn" href="./assets/AC.pdf" download onclick="closeMobileMenu()">Download Resume</a>
+        <a class="btn mobile-btn" href="https://github.com/yourusername" target="_blank" onclick="closeMobileMenu()">GitHub</a>
+        
+        <!-- Theme Toggle moved up with other buttons -->
+        <button class="btn mobile-theme-btn" id="mobileThemeToggle" onclick="toggleTheme()">
+          <span class="theme-icon">🌙</span>
+          Switch Theme
+        </button>
       </div>
     </div>
 
