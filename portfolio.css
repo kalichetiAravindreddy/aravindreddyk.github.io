@@ -130,7 +130,8 @@ nav{display:flex; align-items:center; justify-content:space-between; padding:8px
 }
 
 /* Mobile Menu Content */
-.mobile-menu .btn {
+/* Mobile Menu Content - exclude theme button */
+.mobile-menu .btn:not(.mobile-theme-btn) {
   width: 100%;
   text-align: center;
   padding: 15px 20px;
