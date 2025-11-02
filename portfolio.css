@@ -129,9 +129,8 @@ nav{display:flex; align-items:center; justify-content:space-between; padding:8px
   transform: scale(1.1);
 }
 
-/* Mobile Menu Content */
-/* Mobile Menu Content - exclude theme button */
-.mobile-menu .btn:not(.mobile-theme-btn) {
+/* Mobile Menu Content - Fix for theme button */
+.mobile-menu .btn {
   width: 100%;
   text-align: center;
   padding: 15px 20px;
@@ -139,6 +138,28 @@ nav{display:flex; align-items:center; justify-content:space-between; padding:8px
   border-bottom: 1px solid rgba(255,255,255,0.05);
   border-radius: 0;
   justify-content: center;
+  /* Ensure buttons display as block */
+  display: block;
+}
+
+/* Specifically target the theme button to override above styles */
+.mobile-theme-btn {
+  width: 100%;
+  display: flex !important; /* Force display flex */
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px;
+  background: var(--glass);
+  border: 1px solid rgba(255,255,255,0.1) !important;
+  border-radius: 10px !important;
+  color: var(--accent);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  margin-top: 10px;
+  /* Remove the bottom border from previous rule */
+  border-bottom: none !important;
 }
 
 .mobile-theme-section {
@@ -147,21 +168,6 @@ nav{display:flex; align-items:center; justify-content:space-between; padding:8px
   border-top: 1px solid rgba(255,255,255,0.1);
 }
 
-.mobile-theme-btn {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 15px;
-  background: var(--glass);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 10px;
-  color: var(--accent);
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-size: 16px;
-}
 .mobile-theme-btn:hover {
   background: var(--glass-strong);
   transform: translateY(-2px);
