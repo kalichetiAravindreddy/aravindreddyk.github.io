@@ -5,47 +5,76 @@
 
     // Theme Toggle
     const themeToggle = document.getElementById('themeToggle');
-    const mobileThemeToggle = document.getElementById('mobileThemeToggle');
-    const currentTheme = localStorage.getItem('theme') || 'dark';
-    
-    document.documentElement.setAttribute('data-theme', currentTheme);
-    updateThemeToggle();
+const mobileThemeToggle = document.getElementById('mobileThemeToggle');
+const currentTheme = localStorage.getItem('theme') || 'dark';
 
-    function toggleTheme() {
-      const currentTheme = document.documentElement.getAttribute('data-theme');
-      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-      document.documentElement.setAttribute('data-theme', newTheme);
-      localStorage.setItem('theme', newTheme);
-      updateThemeToggle();
+document.documentElement.setAttribute('data-theme', currentTheme);
+updateThemeToggle();
+
+function toggleTheme() {
+  const currentTheme = document.documentElement.getAttribute('data-theme');
+  const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', newTheme);
+  localStorage.setItem('theme', newTheme);
+  updateThemeToggle();
+}
+
+function updateThemeToggle() {
+  const currentTheme = document.documentElement.getAttribute('data-theme');
+  const icon = currentTheme === 'dark' ? '🌙' : '☀️';
+  themeToggle.textContent = icon;
+  if(mobileThemeToggle) {
+    // For the mobile theme button with text
+    const themeIcon = mobileThemeToggle.querySelector('.theme-icon');
+    if (themeIcon) {
+      themeIcon.textContent = icon;
+    } else {
+      mobileThemeToggle.textContent = icon;
     }
+  }
+}
 
-    function updateThemeToggle() {
-      const currentTheme = document.documentElement.getAttribute('data-theme');
-      const icon = currentTheme === 'dark' ? '🌙' : '☀️';
-      themeToggle.textContent = icon;
-      if(mobileThemeToggle) mobileThemeToggle.textContent = icon;
-    }
+themeToggle.addEventListener('click', toggleTheme);
+if(mobileThemeToggle) mobileThemeToggle.addEventListener('click', toggleTheme);
 
-    themeToggle.addEventListener('click', toggleTheme);
-    if(mobileThemeToggle) mobileThemeToggle.addEventListener('click', toggleTheme);
+// Mobile Menu
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
 
-    // Mobile Menu
-    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
+function toggleMobileMenu() {
+  mobileMenuBtn.classList.toggle('active');
+  mobileMenu.classList.toggle('active');
+  document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : 'auto';
+}
 
-    function toggleMobileMenu() {
-      mobileMenuBtn.classList.toggle('active');
-      mobileMenu.classList.toggle('active');
-      document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : 'auto';
-    }
+function closeMobileMenu() {
+  mobileMenuBtn.classList.remove('active');
+  mobileMenu.classList.remove('active');
+  document.body.style.overflow = 'auto';
+}
 
-    function closeMobileMenu() {
-      mobileMenuBtn.classList.remove('active');
-      mobileMenu.classList.remove('active');
-      document.body.style.overflow = 'auto';
-    }
+// Close menu when clicking outside
+document.addEventListener('click', function(event) {
+  if (mobileMenu.classList.contains('active') && 
+      !mobileMenu.contains(event.target) && 
+      !mobileMenuBtn.contains(event.target)) {
+    closeMobileMenu();
+  }
+});
 
-    mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+// Close menu when pressing Escape key
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape' && mobileMenu.classList.contains('active')) {
+    closeMobileMenu();
+  }
+});
+
+mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+
+// Close menu when clicking on any mobile menu link
+document.querySelectorAll('.mobile-menu .btn').forEach(link => {
+  link.addEventListener('click', closeMobileMenu);
+});
 
     // Particle Background
     function createParticles() {

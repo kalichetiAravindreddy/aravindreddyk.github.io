@@ -43,6 +43,12 @@
 
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
+      <!--close button at top-->
+      <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+        <div class="mobile-menu-title">Menu</div>
+        <button class="mobile-close-button" onclick="closeMobileMenu">✕</button>
+      </div>
       <a class="btn" href="#about" onclick="closeMobileMenu()">About</a>
       <a class="btn" href="#education" onclick="closeMobileMenu()">Education</a>
       <a class="btn" href="#certifications" onclick="closeMobileMenu()">Certifications</a>
@@ -52,7 +58,14 @@
       <a class="btn" href="#contact" onclick="closeMobileMenu()">Contact</a>
       <a class="btn" href="./resume.pdf" download onclick="closeMobileMenu()">Download Resume</a>
       <a class="btn" href="https://github.com/yourusername" target="_blank" onclick="closeMobileMenu()">GitHub</a>
-      <button class="theme-toggle" id="mobileThemeToggle">🌙</button>
+
+      <div class="mobile-theme-section">
+      <button class="btn mobile-theme-btn" id="mobileThemeToggle" onclick="toggletheme()">
+        <span class="theme-icon">🌙</span>
+        Toggle Theme
+      </button>
+      </div>
+      </div>
     </div>
 
     <header class="hero">
