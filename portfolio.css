@@ -153,8 +153,21 @@ nav{display:flex; align-items:center; justify-content:space-between; padding:8px
   justify-content: center;
   gap: 10px;
   padding: 15px;
+  background: var(--glass);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 10px;
+  color: var(--accent);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 16px;
 }
-
+.mobile-theme-btn:hover {
+  background: var(--glass-strong);
+  transform: translateY(-2px);
+}
+.theme-icon {
+  font-size: 18px;
+}
 /* Mobile responsive */
 @media (max-width: 880px) {
   .mobile-menu-btn {
