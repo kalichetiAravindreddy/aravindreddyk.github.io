@@ -142,7 +142,7 @@ nav{display:flex; align-items:center; justify-content:space-between; padding:8px
 }
 
 /* Specifically target the theme button to override above styles */
-/* Specifically target the theme button to override above styles */
+
 .mobile-theme-section .btn.mobile-theme-btn {
   width: 100%;
   display: flex;
@@ -320,6 +320,8 @@ h3.section-title::after{content:'';position:absolute;bottom:-5px;left:0;width:50
 .link-like{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:8px 10px;border-radius:10px;cursor:pointer;transition:all 0.3s ease;}
 [data-theme="light"] .link-like{border:1px solid rgba(0,0,0,0.06);}
 .link-like:hover{background:var(--glass);}
+.project-actions .link-like:first-child{color:grey!important;}
+
 
 /* FOOTER */
 footer{padding:28px 0;text-align:center;color:var(--muted)}
