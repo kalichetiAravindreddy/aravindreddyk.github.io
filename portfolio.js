@@ -132,12 +132,12 @@ function createParticles() {
 // Project detail data
 const projectDetails = {
     proj1: {
-        title: 'TODO App',
-        body: 'Built a simple TODO app with Flask, SQLite, and sessions. Implemented CRUD, user auth, and responsive UI. Great for learning full-stack basics.'
+        title: 'Mern image search web app',
+        body: 'Built a full-stack image search platform using React.js, Node.js, Express.js, and MongoDB. \n Integrated Unsplash API for fetching real-time images with OAuth 2.0 authentication.Designed a clean, responsive UI with HTML, CSS, and JavaScript for smooth user interaction.Implemented features like multi-select, search history tracking, and real-time results.Followed modular client–server architecture and managed version control using Git & GitHub.'
     },
     proj2: {
-        title: 'Portfolio Generator',
-        body: 'A Python CLI tool that produces static HTML portfolios from YAML. Useful to prototype quickly and customize templates.'
+        title: 'Portfolio',
+        body: 'A basic portfolio website built using HTML, CSS, and JavaScript to display my personal details, skills, and projects.Designed with a clean layout and simple navigation for better presentation and readability.'
     },
     proj3: {
         title: 'Notes API',
@@ -238,3 +238,5 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+

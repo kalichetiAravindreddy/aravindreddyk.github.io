@@ -7,6 +7,8 @@
   <meta name="description" content="Professional one-page black & white portfolio for freshers — projects, resume, skills, contact." />
   <link rel="icon" href="data:;base64,iVBORw0KGgo=" />  
   <link rel="stylesheet" href="portfolio.css">
+  <!-- Add this in head section -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
 <body>
   <!-- Particle Background -->
@@ -79,7 +81,7 @@
 
         <div class="stats">
           <div class="stat">
-            <b>3</b>
+            <b>2</b>
             <div class="muted">Projects</div>
           </div>
           <div class="stat">
@@ -97,7 +99,7 @@
         <div class="profile-photo">
           <div style="text-align:center">
             <div style="font-size:22px;font-weight:700;opacity:.9">Your Photo</div>
-            <div class="muted" style="font-size:13px">Replace with a neat headshot</div>
+            <div class="muted" style="font-size:13px"><!--Replace with a neat headshot-->will be uploaded soon . . .</div>
           </div>
         </div>
 
@@ -157,8 +159,9 @@
               <div class="education-marks">percentage : 79% / 100%</div>
             </div>
           </div>
+        </section>
           
-          <!-- 10th Class -->
+          <!-- 10th Class 
           <div class="education-card">
             <div class="edu-number">3</div>
             <div class="education-content">
@@ -171,6 +174,7 @@
           </div>
         </div>
       </section>
+           -->
 
       <!-- Logo Modal -->
       <div id="logoModal" class="modal" onclick="closeLogoModal(event)">
@@ -191,17 +195,17 @@
           <div class="cert-card">
             <div class="cert-icon">💻</div>
             <h4>Full Stack development</h4>
-            <p class="muted">Accent Techno Soft · Coimbatore · 2023</p>
+            <p class="muted">Page on top · Coimbatore · 2023</p>
           </div>
           <div class="cert-card">
             <div class="cert-icon">🌐</div>
             <h4>PHP</h4>
-            <p class="muted">Accent Techno Soft · 2023</p>
+            <p class="muted">Accent Techno Soft · 2022</p>
           </div>
           <div class="cert-card">
             <div class="cert-icon">📊</div>
             <h4>SQL Fundamentals</h4>
-            <p class="muted">Coursera · 2023</p>
+            <p class="muted">freeCodeCamp · 2023</p>
           </div>
           <div class="cert-card">
             <div class="cert-icon">⚡</div>
@@ -214,14 +218,14 @@
       <section id="resources" class="fade-up">
         <h3 class="section-title">Download Resources</h3>
         <div class="resources-grid">
-          <a href="assets/AC.pdf" download class="resource-card">
+          <a href="assets/ARAVINDREDDY. RESUME.new.pdf" download class="resource-card">
             <div class="resource-icon">📄</div>
             <div class="resource-info">
               <h4>Resume PDF</h4>
               <p>Updated: oct 2025</p>
             </div>
           </a>
-          <a href="./portfolio.pdf" download class="resource-card">
+          <a href="assets/Aravind Reddy— Portfolio.pdf" download class="resource-card">
             <div class="resource-icon">🎨</div>
             <div class="resource-info">
               <h4>Portfolio PDF</h4>
@@ -276,33 +280,33 @@
         <div class="projects-grid">
 
           <article class="card">
-            <h4>Project One — TODO App</h4>
-            <p class="muted">A minimal TODO app built with Flask and SQLite. Authentication, create/read/update/delete tasks.</p>
+            <h4>Project One — Mern-Image-search-web-app</h4>
+            <p class="muted">A full-stack image search platform built using MERN stack and Unsplash API.Features OAuth login, real-time search, and saved search history.</p>
             <div class="tags" style="margin:10px 0">
-              <span class="tag">Flask</span>
-              <span class="tag">SQLite</span>
-              <span class="tag">HTML/CSS</span>
+              <span class="tag">node.js/express.js</span>
+              <span class="tag">mongoDB</span>
+              <span class="tag">HTML/CSS/React.js</span>
             </div>
             <div class="project-actions">
               <button class="link-like" onclick="openProject('proj1')">Details</button>
-              <a class="link-like" href="https://github.com/yourusername/project-one" target="_blank">View on GitHub</a>
+              <a class="link-like" href="https://github.com/kalichetiAravindreddy/mern-image-search.git" target="_blank">View on GitHub</a>
             </div>
           </article>
 
           <article class="card">
-            <h4>Project Two — Portfolio Generator</h4>
-            <p class="muted">A small Python utility that generates a static HTML portfolio from a YAML config. Useful for quick prototypes.</p>
+            <h4>Project Two — Portfolio</h4>
+            <p class="muted">A simple portfolio website created using HTML, CSS, and JavaScript to showcase my details and projects.</p>
             <div class="tags" style="margin:10px 0">
-              <span class="tag">Python</span>
+              <span class="tag">javascript</span>
               <span class="tag">HTML</span>
-              <span class="tag">CLI</span>
+              <span class="tag">CSS</span>
             </div>
             <div class="project-actions">
               <button class="link-like" onclick="openProject('proj2')">Details</button>
-              <a class="link-like" href="https://github.com/yourusername/project-two" target="_blank">View on GitHub</a>
+              <a class="link-like" href="https://github.com/kalichetiAravindreddy/aravindreddyk.github.io.git" target="_blank">View on GitHub</a>
             </div>
           </article>
-
+          <!--
           <article class="card">
             <h4>Project Three — Notes API</h4>
             <p class="muted">A RESTful notes API made with Flask and Marshmallow for serialization. Includes token auth and tests.</p>
@@ -316,7 +320,7 @@
               <a class="link-like" href="https://github.com/yourusername/project-three" target="_blank">View on GitHub</a>
             </div>
           </article>
-
+           -->
         </div>
       </section>
 
@@ -335,7 +339,7 @@
         <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:12px">
           <a class="btn" href="mailto:aravindsuma3579@gmail.com">Email Me</a>
           <a class="btn" href="assets/AC.pdf" download>Download Resume</a>
-          <a class="btn" href="https://github.com/yourusername" target="_blank">GitHub</a>
+          <a class="btn" href="https://github.com/kalichetiAravindreddy" target="_blank">GitHub</a>
           <a class="btn" href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
         </div>
       </section>
@@ -343,7 +347,7 @@
     </main>
 
     <footer>
-      <div class="muted">Built with ❤️ · Fresh & Professional · Black & White Theme</div>
+      <div class="muted">Built with ❤️ ·  Black & White Theme</div>
     </footer>
 
   </div>
