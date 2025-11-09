@@ -137,8 +137,8 @@ const projectDetails = {
         body: 'A basic portfolio website built using HTML, CSS, and JavaScript to display my personal details, skills, and projects.Designed with a clean layout and simple navigation for better presentation and readability.'
     },
     proj3: {
-        title: 'Notes API',
-        body: 'RESTful API using Flask. JWT-based auth, serializers, and unit tests. Designed for small clients and mobile apps.'
+        title: 'Chatbot',
+        body: 'NeuroChat is an advanced web-based chat interface built with HTML5, CSS3, and Vanilla JavaScript that simulates intelligent conversations through sophisticated pattern matching. Instead of using actual AI, it employs a clever rule-based system that detects keywords in user messages and generates contextually appropriate responses from predefined categories. The platform features a stunning glass-morphism design with animated gradient backgrounds, real-time messaging with smooth animations, and a secure user authentication system. With its impressive 3D Earth visualization and responsive design, NeuroChat delivers an engaging user experience while demonstrating advanced frontend development capabilities without relying on external APIs or machine learning frameworks.'
     }
 };
 
